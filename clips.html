@@ -1,1 +1,55 @@
-<h1>Clips & Screenshots</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clips & Screenshots</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="logo">ShadowUnleashed Gaming</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Streaming Schedule</a></li>
+                <li><a href="clips.html">Clips & Screenshots</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="gallery">
+            <h1>Clips & Screenshots</h1>
+            <div id="clips-container"></div>
+            <form id="upload-form" class="hidden" enctype="multipart/form-data">
+                <input type="file" id="file-upload" accept="image/*,video/*">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ShadowUnleashed Gaming. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const uploadForm = document.getElementById("upload-form");
+            const fileUpload = document.getElementById("file-upload");
+            const userAuthenticated = true; // Placeholder for authentication check
+            
+            if (userAuthenticated) {
+                uploadForm.classList.remove("hidden");
+            }
+            
+            uploadForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("File uploaded successfully (Simulated).");
+            });
+        });
+    </script>
+</body>
+</html>
